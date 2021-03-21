@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+  <style>
+    .center {
+      margin-top: 100px margin-left: 50px;
+      margin-right: 50px;
+    }
+
+    .container {
+      margin-top: 100px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="card">
+      <div class="card-body">
+
+        <div class="table-responsive">
+
+          <table class="table caption-top center table-hover" style="margin-left: 50px width:80%">
+
+            <caption>Total: {{seqno|length}}</caption>
+
+            <thead class="table-light">
+              <tr class="table-info">
+                <th scope="col">Seq. No. </th>
+                <th scope="col">Hospital Address</th>
+                <th scope="col">State</th>
+                <th scope="col">Contact Number</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for i in submit %}
+              <tr>
+                <td>{{i.seqno}}</td>
+                <td>{{i.hospName}}</td>
+                <td>{{i.state}}</td>
+                <td>{{i.contact}}</td>
+              </tr>
+
+              {% endfor %}
+            </tbody>
+
+          </table>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+
+</body>
+
+
+
+
+
+
+<!-- Separate Popper and Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+
+
+</html>
